@@ -1,20 +1,40 @@
-export default function Footer({ coupleNames, hashtag, note, onNavigate }) {
+export default function Footer({ data }) {
   return (
-    <footer className="section-shell pb-28 pt-8 sm:pb-12">
-      <div className="section-card overflow-hidden px-6 py-10 text-center sm:px-8 sm:py-12">
-        <p className="text-xs font-semibold uppercase tracking-[0.32em] text-gold">
-          Thank You
-        </p>
-        <h2 className="mt-4 text-4xl font-semibold text-ink sm:text-5xl">
-          {coupleNames}
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-ink/75">{note}</p>
-        <p className="mt-6 text-sm font-semibold uppercase tracking-[0.28em] text-ink/55">
-          {hashtag}
-        </p>
-        <button type="button" onClick={() => onNavigate('hero')} className="btn-primary mt-8">
-          Back to Top
-        </button>
+    <footer className="page-shell pb-12 sm:pb-16" id="contact">
+      <div className="surface-card p-6 sm:p-8 lg:p-10">
+        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="space-y-4">
+            <p className="section-label">Contact & Footer</p>
+            <h2 className="text-4xl leading-none sm:text-5xl">
+              Thank you for being part of our day.
+            </h2>
+            <p className="text-base sm:text-lg">
+              {data.footerNote}
+            </p>
+            <p className="text-xl text-[#2f241f] sm:text-2xl">
+              {data.coupleNames}
+            </p>
+          </div>
+
+          <div className="soft-card p-5 sm:p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8e735e]">
+              Contact
+            </p>
+            <p className="mt-4 text-2xl text-[#2f241f]">{data.contactName}</p>
+            <div className="mt-6 space-y-3 text-base">
+              <p>
+                <a href={`tel:${data.contactPhone}`} className="hover:text-[#2f241f]">
+                  {data.contactPhone}
+                </a>
+              </p>
+              <p>
+                <a href={`mailto:${data.contactEmail}`} className="hover:text-[#2f241f]">
+                  {data.contactEmail}
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );

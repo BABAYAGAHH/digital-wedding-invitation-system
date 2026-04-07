@@ -6,8 +6,8 @@
 
 :root {
   color-scheme: light;
-  background: #fffaf2;
-  color: #372c22;
+  background: #fffaf6;
+  color: #3a2c26;
   font-family: 'Manrope', system-ui, sans-serif;
 }
 
@@ -18,9 +18,8 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(250, 241, 227, 0.88), rgba(255, 250, 242, 0.52) 36%, rgba(255, 250, 242, 1) 74%),
-    linear-gradient(180deg, #fffdf8 0%, #fffaf2 42%, #f7efe4 100%);
-  color: #372c22;
+    linear-gradient(180deg, #fffdf9 0%, #fff8f1 45%, #fcf3eb 100%);
+  color: #3a2c26;
 }
 
 #root {
@@ -29,11 +28,11 @@ body {
 
 @layer base {
   * {
-    @apply border-gold/10;
+    @apply border-[#dccbb8]/40;
   }
 
   body {
-    @apply font-body antialiased selection:bg-gold/30 selection:text-ink;
+    @apply antialiased selection:bg-[#d7be9f]/40 selection:text-[#3a2c26];
   }
 
   h1,
@@ -42,98 +41,57 @@ body {
   h4,
   h5,
   h6 {
-    @apply font-display tracking-[0.02em] text-ink;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    @apply text-[#2f241f];
   }
 
   p {
-    @apply leading-7 text-ink/80;
+    @apply leading-7 text-[#5f4a3f];
   }
 
   a,
-  button,
-  input,
-  select,
-  textarea {
-    @apply transition duration-300;
+  button {
+    @apply transition duration-200;
   }
 
-  button:focus-visible,
   a:focus-visible,
-  input:focus-visible,
-  select:focus-visible,
-  textarea:focus-visible {
-    @apply outline-none ring-2 ring-gold/70 ring-offset-2 ring-offset-ivory;
+  button:focus-visible {
+    @apply outline-none ring-2 ring-[#b59267] ring-offset-2 ring-offset-[#fffaf6];
   }
 }
 
 @layer components {
-  .section-shell {
-    @apply relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  .page-shell {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
   }
 
-  .section-card {
-    @apply rounded-[2rem] border border-white/70 bg-white/75 shadow-luxe backdrop-blur-xl;
+  .section-space {
+    @apply py-16 sm:py-20;
   }
 
-  .glass-card {
-    @apply rounded-[1.75rem] border border-white/70 bg-white/70 shadow-soft backdrop-blur-md;
+  .surface-card {
+    @apply rounded-[2rem] border bg-white/80 shadow-[0_18px_50px_rgba(95,74,63,0.08)] backdrop-blur;
   }
 
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-ivory shadow-soft hover:-translate-y-0.5 hover:bg-cocoa;
+  .soft-card {
+    @apply rounded-[1.75rem] border bg-white/75 shadow-[0_12px_32px_rgba(95,74,63,0.07)];
   }
 
-  .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-gold/40 bg-white/75 px-5 py-3 text-sm font-semibold text-ink hover:-translate-y-0.5 hover:border-gold/70 hover:bg-white;
+  .button-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-[#3a2c26] px-5 py-3 text-sm font-semibold text-[#fffaf6] hover:-translate-y-0.5 hover:bg-[#524038];
   }
 
-  .btn-muted {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/70 bg-white/65 px-4 py-2.5 text-sm font-semibold text-ink/80 hover:bg-white;
+  .button-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-[#ceb79a] bg-white px-5 py-3 text-sm font-semibold text-[#3a2c26] hover:-translate-y-0.5 hover:border-[#b59267];
   }
 
-  .field-label {
-    @apply mb-2 block text-xs font-semibold uppercase tracking-[0.24em] text-ink/60;
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-[0.3em] text-[#b59267];
   }
-
-  .field-input {
-    @apply w-full rounded-2xl border border-gold/20 bg-white/85 px-4 py-3 text-sm text-ink shadow-sm placeholder:text-ink/40 focus:border-gold/50 focus:bg-white;
-  }
-}
-
-.divider-ornament {
-  position: relative;
-  margin-inline: auto;
-  height: 1px;
-  width: min(100%, 10rem);
-  background: linear-gradient(
-    90deg,
-    rgba(184, 155, 108, 0),
-    rgba(184, 155, 108, 0.72),
-    rgba(184, 155, 108, 0)
-  );
-}
-
-.divider-ornament::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 0.85rem;
-  height: 0.85rem;
-  transform: translate(-50%, -50%) rotate(45deg);
-  border-radius: 0.2rem;
-  border: 1px solid rgba(184, 155, 108, 0.55);
-  background: #fffaf2;
 }
 
 .text-balance {
   text-wrap: balance;
-}
-
-.ornate-ring {
-  box-shadow:
-    0 0 0 1px rgba(184, 155, 108, 0.18),
-    0 24px 48px rgba(71, 54, 33, 0.08);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -146,7 +104,7 @@ body {
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
