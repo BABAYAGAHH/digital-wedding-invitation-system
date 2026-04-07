@@ -31,7 +31,7 @@ export default function DetailsSection({ data, displayDate }) {
             Wedding Day Details
           </h2>
           <p className="text-base sm:text-lg">
-            We would be honored by your presence as our families and friends gather to witness our marriage and celebrate together.
+            We would be honoured by your presence as our families and friends gather to witness our marriage and celebrate together.
           </p>
         </div>
 

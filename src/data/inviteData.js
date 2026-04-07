@@ -1,10 +1,10 @@
 const inviteData = {
   brideName: 'Emily Louise Jervis',
-  groomName: 'Francis Akwukwaegbu',
-  coupleNames: 'Emily Louise Jervis & Francis Akwukwaegbu',
+  groomName: 'Francis Ubochioma Akwukwaegbu',
+  coupleNames: 'Emily Louise Jervis & Francis Ubochioma Akwukwaegbu',
   introLine: 'Together with their families & friends',
   invitationMessage:
-    'Joyfully request the honor of your presence as they exchange their vows of marriage',
+    'Joyfully request the honour of your presence as they exchange their vows of marriage',
   weddingDate: '12 July 2026',
   churchTime: '2:00 PM',
   receptionTime: '3:30 PM',

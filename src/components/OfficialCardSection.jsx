@@ -18,7 +18,7 @@ export default function OfficialCardSection({ data }) {
               <div className="rounded-[1.5rem] border border-slate-200 bg-white p-4 shadow-[0_14px_30px_rgba(15,23,42,0.05)] sm:p-6">
                 <img
                   src={data.frontCardImage}
-                  alt="Official front wedding card for Emily Louise Jervis and Francis Akwukwaegbu"
+                  alt={`Official front wedding card for ${data.coupleNames}`}
                   className="w-full rounded-[1.2rem] object-contain"
                   loading="lazy"
                 />
@@ -34,7 +34,7 @@ export default function OfficialCardSection({ data }) {
               <div className="rounded-[1.5rem] border border-slate-200 bg-white p-4 shadow-[0_14px_30px_rgba(15,23,42,0.05)] sm:p-6">
                 <img
                   src={data.backCardImage}
-                  alt="Official back wedding card with wedding details for Emily Louise Jervis and Francis Akwukwaegbu"
+                  alt={`Official back wedding card with wedding details for ${data.coupleNames}`}
                   className="w-full rounded-[1.2rem] object-contain"
                   loading="lazy"
                 />

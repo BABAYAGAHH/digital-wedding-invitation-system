@@ -99,7 +99,7 @@ export default function HeroSection({ data, displayDate, onNavigate }) {
             <div className="rounded-[1.5rem] border border-slate-200 bg-white p-3 shadow-[0_14px_34px_rgba(15,23,42,0.08)]">
               <img
                 src={data.frontCardImage}
-                alt="Official front wedding card for Emily Louise Jervis and Francis Akwukwaegbu"
+                alt={`Official front wedding card for ${data.coupleNames}`}
                 className="w-full rounded-[1.2rem] object-contain"
               />
             </div>
