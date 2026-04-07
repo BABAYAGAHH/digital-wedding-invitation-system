@@ -7,7 +7,7 @@ const inviteData = {
     'Joyfully request the honor of your presence as they exchange their vows of marriage',
   weddingDate: '12 July 2026',
   churchTime: '2:00 PM',
-  receptionTime: '5:30 PM',
+  receptionTime: '3:30 PM',
   churchVenue: 'St Peter and Paul Church',
   churchAddress: 'Uppingham, Rutland',
   churchPostcode: 'LE15 9TJ',
