@@ -6,8 +6,8 @@
 
 :root {
   color-scheme: light;
-  background: #fffaf6;
-  color: #3a2c26;
+  background: #fbfcff;
+  color: #111827;
   font-family: 'Manrope', system-ui, sans-serif;
 }
 
@@ -18,8 +18,8 @@ html {
 body {
   min-height: 100vh;
   background:
-    linear-gradient(180deg, #fffdf9 0%, #fff8f1 45%, #fcf3eb 100%);
-  color: #3a2c26;
+    linear-gradient(180deg, #fdfefe 0%, #f5f8fc 52%, #eef3f9 100%);
+  color: #111827;
 }
 
 #root {
@@ -42,11 +42,11 @@ body {
   h5,
   h6 {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    @apply text-[#2f241f];
+    @apply text-[#11284c];
   }
 
   p {
-    @apply leading-7 text-[#5f4a3f];
+    @apply leading-7 text-[#334155];
   }
 
   a,
@@ -56,7 +56,7 @@ body {
 
   a:focus-visible,
   button:focus-visible {
-    @apply outline-none ring-2 ring-[#b59267] ring-offset-2 ring-offset-[#fffaf6];
+    @apply outline-none ring-2 ring-[#2563eb] ring-offset-2 ring-offset-[#fbfcff];
   }
 }
 
@@ -70,23 +70,31 @@ body {
   }
 
   .surface-card {
-    @apply rounded-[2rem] border bg-white/80 shadow-[0_18px_50px_rgba(95,74,63,0.08)] backdrop-blur;
+    @apply rounded-[2rem] border border-slate-200 bg-white shadow-[0_18px_48px_rgba(15,23,42,0.08)];
   }
 
   .soft-card {
-    @apply rounded-[1.75rem] border bg-white/75 shadow-[0_12px_32px_rgba(95,74,63,0.07)];
+    @apply rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_12px_32px_rgba(15,23,42,0.06)];
+  }
+
+  .accent-frame {
+    @apply border-t-4 border-t-[#11284c];
+  }
+
+  .section-tint {
+    @apply bg-[#f7faff];
   }
 
   .button-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-[#3a2c26] px-5 py-3 text-sm font-semibold text-[#fffaf6] hover:-translate-y-0.5 hover:bg-[#524038];
+    @apply inline-flex items-center justify-center rounded-full bg-[#11284c] px-5 py-3 text-sm font-semibold text-white hover:-translate-y-0.5 hover:bg-[#1e4d8f];
   }
 
   .button-secondary {
-    @apply inline-flex items-center justify-center rounded-full border border-[#ceb79a] bg-white px-5 py-3 text-sm font-semibold text-[#3a2c26] hover:-translate-y-0.5 hover:border-[#b59267];
+    @apply inline-flex items-center justify-center rounded-full border border-[#9db4d1] bg-white px-5 py-3 text-sm font-semibold text-[#11284c] hover:-translate-y-0.5 hover:border-[#2563eb] hover:bg-[#f8fbff];
   }
 
   .section-label {
-    @apply text-xs font-semibold uppercase tracking-[0.3em] text-[#b59267];
+    @apply text-xs font-semibold uppercase tracking-[0.3em] text-[#2563eb];
   }
 }
 

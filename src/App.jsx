@@ -1,24 +1,12 @@
 import Footer from './components/Footer';
 import DetailsSection from './components/DetailsSection';
 import HeroSection from './components/HeroSection';
+import OfficialCardSection from './components/OfficialCardSection';
 import RSVPSection from './components/RSVPSection';
 import VenueSection from './components/VenueSection';
 import inviteData from './data/inviteData';
 
-function formatWeddingDate(dateValue) {
-  const [day, month, year] = dateValue.split('/').map(Number);
-  const date = new Date(year, month - 1, day);
-
-  return new Intl.DateTimeFormat('en-GB', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  }).format(date);
-}
-
 function App() {
-  const displayDate = formatWeddingDate(inviteData.weddingDate);
-
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
 
@@ -36,11 +24,13 @@ function App() {
       <main className="relative z-10">
         <HeroSection
           data={inviteData}
-          displayDate={displayDate}
+          displayDate={inviteData.weddingDate}
           onNavigate={scrollToSection}
         />
 
-        <DetailsSection data={inviteData} displayDate={displayDate} />
+        <OfficialCardSection data={inviteData} />
+
+        <DetailsSection data={inviteData} displayDate={inviteData.weddingDate} />
 
         <VenueSection data={inviteData} />
 
