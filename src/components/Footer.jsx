@@ -4,12 +4,12 @@ export default function Footer({ data }) {
       <div className="surface-card accent-frame border-slate-300 p-6 sm:p-8 lg:p-10">
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-4">
-            <p className="section-label">Contact & Footer</p>
+            <p className="section-label">With Love</p>
             <h2 className="text-4xl leading-none text-[#11284c] sm:text-5xl">
-              Thank you for being part of our day.
+              Thank you for sharing in our joy.
             </h2>
             <p className="text-base sm:text-lg">
-              We look forward to celebrating with you.
+              We look forward to welcoming you as we celebrate our marriage.
             </p>
             <p className="text-xl text-[#111827] sm:text-2xl">
               {data.coupleNames}
@@ -21,7 +21,7 @@ export default function Footer({ data }) {
 
           <div className="soft-card border-slate-300 p-5 sm:p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#1e4d8f]">
-              Contact
+              For Kindly Replies
             </p>
             <p className="mt-4 text-2xl text-[#111827]">{data.contactName}</p>
             <div className="mt-6 space-y-3 text-base">

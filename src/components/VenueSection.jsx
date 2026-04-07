@@ -9,10 +9,10 @@ export default function VenueSection({ data }) {
           <div className="max-w-2xl space-y-3">
             <p className="section-label">Venue & Directions</p>
             <h2 className="text-4xl leading-none text-[#11284c] sm:text-5xl lg:text-6xl">
-              Clear venue details with direct navigation links.
+              Where To Join Us
             </h2>
             <p className="text-base sm:text-lg">
-              Use the official links below for quick navigation to the church service and reception venue.
+              From the church service to the evening reception, the details below will guide your journey.
             </p>
           </div>
 
@@ -64,12 +64,12 @@ export default function VenueSection({ data }) {
         <div className="surface-card accent-frame border-slate-300 p-6 sm:p-8 lg:p-10">
           <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="space-y-3">
-              <p className="section-label">Reception / Hotel Info</p>
+              <p className="section-label">Evening Reception</p>
               <h2 className="text-4xl leading-none text-[#11284c] sm:text-5xl">
                 Reception at {data.receptionVenue}
               </h2>
               <p className="text-base sm:text-lg">
-                The reception takes place at {data.receptionVenue}. Guests can use the official directions link below for straightforward arrival details.
+                Following the ceremony, please join us at {data.receptionVenue} for dinner, dancing, and joyful celebration.
               </p>
             </div>
 

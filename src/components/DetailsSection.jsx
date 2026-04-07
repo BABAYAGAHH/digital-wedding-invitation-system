@@ -28,10 +28,10 @@ export default function DetailsSection({ data, displayDate }) {
         <div className="max-w-2xl space-y-3">
           <p className="section-label">Wedding Details</p>
           <h2 className="text-4xl leading-none text-[#11284c] sm:text-5xl lg:text-6xl">
-            The day at a glance.
+            Wedding Day Details
           </h2>
           <p className="text-base sm:text-lg">
-            Cleanly presented details so guests can quickly see the timing, venues, and flow of the celebration.
+            We would be honored by your presence as our families and friends gather to witness our marriage and celebrate together.
           </p>
         </div>
 

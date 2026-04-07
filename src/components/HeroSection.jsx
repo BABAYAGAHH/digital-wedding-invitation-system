@@ -104,9 +104,9 @@ export default function HeroSection({ data, displayDate, onNavigate }) {
               />
             </div>
             <div className="space-y-3 px-2 pb-2 pt-6 sm:px-3">
-              <p className="section-label">Official Wedding Card</p>
+              <p className="section-label">The Invitation</p>
               <p className="text-sm leading-7 text-[#334155]">
-                The landing page is designed to complement the official card artwork with clean editorial spacing, navy accents, and a refined digital presentation.
+                With joyful hearts, Emily and Francis invite you to witness their vows and share in their celebration.
               </p>
             </div>
           </div>
