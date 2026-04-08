@@ -19,14 +19,15 @@ const inviteData = {
   receptionGoogleMapsUrl:
     'https://maps.app.goo.gl/NzVmhXh5ubJQzUiF6?g_st=awb',
   footerNote: 'Dinner & dancing to follow',
-  rsvpUrl: 'https://wa.me/message/XYXN6LONL5FCB1',
+  rsvpUrl:
+    'https://wa.me/447950534810?text=Hello%2C%20I%20received%20the%20wedding%20invitation%20for%20Emily%20Louise%20Jervis%20%26%20Francis%20Ubochioma%20Akwukwaegbu%20on%2012%20July%202026.%20Please%20confirm%20my%20RSVP.',
   contactName: 'Wedding Coordinator',
   contactPhone: '+44 7950 534810',
   contactEmail: 'Francisems90@gmail.com',
   frontCardImage:
-    'https://res.cloudinary.com/dctjy0klg/image/upload/v1775556267/EMILY-_-FRANCIS-FRONT-VIEW.jpg_ovjnbt.jpg',
+    'https://res.cloudinary.com/dctjy0klg/image/upload/v1775648215/EMILY-_-FRANCIS-2026-front.jpg_ccxlb4.jpg',
   backCardImage:
-    'https://res.cloudinary.com/dctjy0klg/image/upload/v1775556262/EMILY-_-FRANCIS-2026.jpg_z5xrld.jpg',
+    'https://res.cloudinary.com/dctjy0klg/image/upload/v1775648215/EMILY-_-FRANCIS-2026.jpg_1_rals6p.jpg',
 };
 
 export default inviteData;
