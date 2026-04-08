@@ -11,6 +11,8 @@ export default function RSVPSection({ data }) {
         </p>
         <a
           href={data.rsvpUrl}
+          target="_blank"
+          rel="noreferrer noopener"
           className="button-secondary mt-8 border-white/50 bg-white text-[#11284c] hover:border-white hover:bg-[#eff6ff]"
           aria-label="RSVP now"
         >

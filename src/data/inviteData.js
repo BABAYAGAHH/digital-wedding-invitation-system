@@ -19,10 +19,10 @@ const inviteData = {
   receptionGoogleMapsUrl:
     'https://maps.app.goo.gl/NzVmhXh5ubJQzUiF6?g_st=awb',
   footerNote: 'Dinner & dancing to follow',
-  rsvpUrl: '#',
+  rsvpUrl: 'https://wa.me/message/XYXN6LONL5FCB1',
   contactName: 'Wedding Coordinator',
-  contactPhone: '+44 0000 000000',
-  contactEmail: 'hello@weddinginvite.com',
+  contactPhone: '+44 7950 534810',
+  contactEmail: 'Francisems90@gmail.com',
   frontCardImage:
     'https://res.cloudinary.com/dctjy0klg/image/upload/v1775556267/EMILY-_-FRANCIS-FRONT-VIEW.jpg_ovjnbt.jpg',
   backCardImage:
