@@ -85,14 +85,13 @@ export default function HeroSection({ data, displayDate, onNavigate }) {
               >
                 Reception Directions
               </a>
-              <a
-                href={data.rsvpUrl}
-                target="_blank"
-                rel="noreferrer noopener"
+              <button
+                type="button"
+                onClick={() => onNavigate('rsvp')}
                 className="button-primary"
               >
                 RSVP Now
-              </a>
+              </button>
             </div>
           </div>
 
