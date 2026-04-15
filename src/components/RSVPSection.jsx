@@ -1,13 +1,27 @@
 import { useState } from 'react';
 
-const attendanceOptions = ['Attending', 'Not Attending'];
+const attendanceOptions = [
+  {
+    value: 'accept',
+    label: 'Joyfully Accept',
+    description: 'We would be delighted to welcome you to our celebration.',
+  },
+  {
+    value: 'decline',
+    label: 'Regretfully Decline',
+    description: 'You will be missed, and we are grateful for your reply.',
+  },
+];
 const guestOptions = ['1', '2', '3', '4', '5'];
 
 export default function RSVPSection({ data }) {
-  const [attendance, setAttendance] = useState('Attending');
+  const [attendance, setAttendance] = useState('accept');
   const [guestCount, setGuestCount] = useState('1');
 
-  const attendingGuests = attendance === 'Attending' ? guestCount : '0';
+  const selectedAttendance =
+    attendanceOptions.find((option) => option.value === attendance) ??
+    attendanceOptions[0];
+  const attendingGuests = attendance === 'accept' ? guestCount : '0';
 
   const handleReplyByEmail = () => {
     const subject = `Wedding RSVP for ${data.coupleNames}`;
@@ -18,7 +32,7 @@ export default function RSVPSection({ data }) {
       `Wedding date: ${data.weddingDate}`,
       '',
       'Kindly accept this reply:',
-      `Attendance: ${attendance}`,
+      `Attendance: ${selectedAttendance.label}`,
       `Number attending: ${attendingGuests}`,
       '',
       'With warm regards,',
@@ -47,26 +61,24 @@ export default function RSVPSection({ data }) {
             </legend>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               {attendanceOptions.map((option) => {
-                const isSelected = attendance === option;
+                const isSelected = attendance === option.value;
 
                 return (
                   <label
-                    key={option}
+                    key={option.value}
                     className={`cursor-pointer rounded-[1.5rem] border px-4 py-4 text-left transition ${isSelected ? 'border-white bg-white text-[#11284c] shadow-[0_14px_30px_rgba(15,23,42,0.18)]' : 'border-white/20 bg-white/6 text-white hover:border-white/40 hover:bg-white/10'}`}
                   >
                     <input
                       type="radio"
                       name="attendance"
-                      value={option}
+                      value={option.value}
                       checked={isSelected}
-                      onChange={() => setAttendance(option)}
+                      onChange={() => setAttendance(option.value)}
                       className="sr-only"
                     />
-                    <span className="block text-lg font-semibold">{option}</span>
+                    <span className="block text-lg font-semibold">{option.label}</span>
                     <span className={`mt-2 block text-sm ${isSelected ? 'text-slate-600' : 'text-slate-300'}`}>
-                      {option === 'Attending'
-                        ? 'We would be delighted to welcome you to our celebration.'
-                        : 'You will be missed, and we are grateful for your reply.'}
+                      {option.description}
                     </span>
                   </label>
                 );
@@ -74,7 +86,7 @@ export default function RSVPSection({ data }) {
             </div>
           </fieldset>
 
-          {attendance === 'Attending' ? (
+          {attendance === 'accept' ? (
             <div className="mt-6 rounded-[1.5rem] border border-white/15 bg-white/6 p-4 sm:p-5">
               <label
                 htmlFor="guest-count"
