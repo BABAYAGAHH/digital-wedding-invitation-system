@@ -10,16 +10,18 @@ export default function RSVPSection({ data }) {
   const attendingGuests = attendance === 'Attending' ? guestCount : '0';
 
   const handleReplyByEmail = () => {
-    const subject = `RSVP for ${data.coupleNames}`;
+    const subject = `Wedding RSVP for ${data.coupleNames}`;
     const body = [
-      'Hello Wedding Coordinator,',
+      `Dear ${data.contactName},`,
       '',
-      `I received the wedding invitation for ${data.coupleNames}.`,
+      `Thank you for the invitation to celebrate the marriage of ${data.coupleNames}.`,
       `Wedding date: ${data.weddingDate}`,
+      '',
+      'Kindly accept this reply:',
       `Attendance: ${attendance}`,
       `Number attending: ${attendingGuests}`,
       '',
-      'Kind regards,',
+      'With warm regards,',
     ].join('\n');
 
     window.location.href = `mailto:${data.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -34,14 +36,14 @@ export default function RSVPSection({ data }) {
             Kindly Reply
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-slate-200 sm:text-lg">
-            Your presence would mean so much to us. Select your attendance below and we will open a prefilled email reply for you.
+            Your presence would be a joy to us. Kindly share your reply below, and we will prepare a graceful email response for you.
           </p>
         </div>
 
         <div className="mx-auto mt-8 max-w-3xl rounded-[1.75rem] border border-white/15 bg-white/8 p-4 backdrop-blur-sm sm:p-6">
           <fieldset>
             <legend className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-200">
-              Will you be attending?
+              Kindly let us know your reply
             </legend>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               {attendanceOptions.map((option) => {
@@ -63,8 +65,8 @@ export default function RSVPSection({ data }) {
                     <span className="block text-lg font-semibold">{option}</span>
                     <span className={`mt-2 block text-sm ${isSelected ? 'text-slate-600' : 'text-slate-300'}`}>
                       {option === 'Attending'
-                        ? 'We would be delighted to welcome you.'
-                        : 'We will miss you and appreciate your reply.'}
+                        ? 'We would be delighted to welcome you to our celebration.'
+                        : 'You will be missed, and we are grateful for your reply.'}
                     </span>
                   </label>
                 );
@@ -78,7 +80,7 @@ export default function RSVPSection({ data }) {
                 htmlFor="guest-count"
                 className="block text-sm font-semibold uppercase tracking-[0.22em] text-slate-200"
               >
-                Number attending
+                Number in your party
               </label>
               <select
                 id="guest-count"
@@ -97,7 +99,7 @@ export default function RSVPSection({ data }) {
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm leading-6 text-slate-200">
-              Your reply will be addressed to {data.contactEmail} with the invitation details and attendance summary included.
+              Your reply will be addressed to {data.contactEmail} with the invitation details and your attendance response already included.
             </p>
             <button
               type="button"
@@ -105,7 +107,7 @@ export default function RSVPSection({ data }) {
               className="button-secondary border-white/50 bg-white text-[#11284c] hover:border-white hover:bg-[#eff6ff]"
               aria-label="Reply by email"
             >
-              Reply by Email
+              Send Reply by Email
             </button>
           </div>
         </div>
